@@ -1,32 +1,3 @@
-/* ─── FontAwesome Font Faces ─── */
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url('../fonts/fontawesome-free/webfonts/fa-solid-900.woff2') format('woff2'),
-       url('../fonts/fontawesome-free/webfonts/fa-solid-900.woff') format('woff'),
-       url('../fonts/fontawesome-free/webfonts/fa-solid-900.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url('../fonts/fontawesome-free/webfonts/fa-regular-400.woff2') format('woff2'),
-       url('../fonts/fontawesome-free/webfonts/fa-regular-400.woff') format('woff'),
-       url('../fonts/fontawesome-free/webfonts/fa-regular-400.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url('../fonts/fontawesome-free/webfonts/fa-brands-400.woff2') format('woff2'),
-       url('../fonts/fontawesome-free/webfonts/fa-brands-400.woff') format('woff'),
-       url('../fonts/fontawesome-free/webfonts/fa-brands-400.ttf') format('truetype');
-}
-
 /* ─── Design Tokens ─── */
 :root {
   --bg:           #FAF8F5;
@@ -612,7 +583,7 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 50vw;
+    grid-template-rows: auto auto;
     min-height: auto;
   }
   .hero-left {
@@ -623,18 +594,25 @@ footer a:hover { color: var(--accent); }
   .hero-tagline { max-width: none; }
   .hero-socials { justify-content: center; }
   .hero-cta { margin: 0 auto; }
-  .hero-right { padding: 0; }
+  .hero-right {
+    padding: 40px 32px 56px;
+    min-height: 72vw;
+  }
   .hero-right::before, .hero-right::after { display: none; }
   .hero-img-wrap {
-    max-width: none;
-    height: 100%;
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
   }
   .hero-img-wrap::before { display: none; }
   .hero-img-wrap img {
     width: 100%;
-    height: 100%;
-    border-radius: 0;
-    aspect-ratio: auto;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius-md);
   }
   .two-col {
     grid-template-columns: 1fr;
