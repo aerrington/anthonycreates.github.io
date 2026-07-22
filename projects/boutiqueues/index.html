@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Boutiqueues — a 1984 queue-theory game, restaged | Anthony Errington</title>
+  <meta name="description" content="A forgotten BASIC business simulation restaged as an atmospheric modern browser game about queues, reputation and growth.">
+  <link rel="canonical" href="https://anthonycreates.com/projects/boutiqueues/">
+  <meta property="og:title" content="Boutiqueues — a 1984 queue-theory game, restaged">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Run a tiny boutique. Learn why a queue changes everything.">
+  <meta property="og:url" content="https://anthonycreates.com/projects/boutiqueues/">
+  <meta property="og:image" content="https://anthonycreates.com/projects/boutiqueues/boutiqueues-game.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/modern.css?v=20260722.3">
+</head>
+<body>
+  <nav id="navbar" class="page-nav"><div class="nav-container"><a class="nav-brand" href="../../index.html">Anthony Errington</a><button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button><div class="nav-links" id="navLinks"><a href="../../index.html#about">About</a><a href="../index.html">Projects</a><a href="../../index.html#podcast">Podcast</a><a href="../../index.html#improv">Improv</a><a href="../../index.html#contact">Contact</a></div></div></nav>
+  <main>
+    <header class="project-hero"><div class="project-hero-inner"><div class="project-hero-copy"><p class="project-kicker">Strategy game · Computational history</p><h1 class="project-title">Boutiqueues</h1><p class="project-deck">A 1984 queue-theory game, restaged as a tiny after-hours boutique.</p><div class="project-actions"><a class="button-primary" href="https://boutiqueues.com/">Play Boutiqueues <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div></div><img class="project-hero-image project-image-dark" src="boutiqueues-game.jpg" alt="Boutiqueues displayed on a glowing green CRT-style screen"></div></header>
+    <article class="project-content">
+      <div class="project-prose"><h2>A programme waiting to be played again</h2><p>I found Boutiqueues as a printed BASIC listing in a 1984 book about programming your microcomputer. You own a shop for six days, choosing staff, advertising and discounts while impatient customers quietly determine whether the business thrives.</p><p>The original was compact and mathematical. I preserved its core model, then extended the simulation with new levels, customer psychology, amenities, changing demand and a longer season. The new version makes every consequence visible: customers enter, wait, storm out, gossip and reshape tomorrow’s demand.</p></div>
+      <section class="origin-pair" aria-label="Boutiqueues then and now"><img src="original-listing.jpg" alt="The original 1984 Boutiqueues BASIC listing in a spiral-bound book" loading="lazy"><div><p class="project-kicker">Then and now</p><h2>The model became a place</h2><p>The printed programme supplies the rules. The restaging supplies atmosphere, legibility and a shop floor worth watching.</p><p>Classic Mode keeps the original six-day challenge intact. A new learning ladder gradually introduces the ideas hidden inside it.</p></div></section>
+      <div class="fact-strip" aria-label="Boutiqueues facts"><div><strong>1984</strong><span>original listing</span></div><div><strong>6</strong><span>learning levels</span></div><div><strong>8</strong><span>insight cards</span></div><div><strong>1</strong><span>tiny boutique</span></div></div>
+      <figure class="project-hero-figure project-motion"><img class="project-hero-image project-image-dark" src="boutiqueues-in-motion.jpg" alt="Boutiqueues in motion with customers crossing the shop floor, assistants at the counter and sales appearing on the till roll" loading="lazy"><figcaption>Customers arrive, queue, browse and leave while the day unfolds.</figcaption></figure>
+      <section class="project-feature-grid" aria-label="Boutiqueues design"><div class="project-feature"><p class="project-kicker">Watch</p><h3>Consequences on the floor</h3><p>Staffing, queues and customer patience are animated rather than buried in a spreadsheet.</p></div><div class="project-feature"><p class="project-kicker">Learn</p><h3>Insight after experience</h3><p>The Consultant’s Notebook explains a phenomenon only after the player has lived through it.</p></div><div class="project-feature"><p class="project-kicker">Balance</p><h3>Thousands of simulated weeks</h3><p>A headless harness tests strategies and ensures each level’s lesson is genuinely required.</p></div></section>
+      <div class="project-prose"><h2>Extending the original simulation</h2><p>The six levels move from staffing and spare capacity through advertising, customer psychology, shaped demand and finally a four-week season. Each new complexity had to create a visible consequence and a real morning decision.</p><p>The aim was not to decorate the mathematics. It was to make the behaviour inside the original program richer, more legible and delightful to notice.</p></div>
+      <blockquote class="project-quote">“The consultant does not explain in advance.”</blockquote>
+      <section class="project-cta" aria-labelledby="boutiqueues-play"><h2 id="boutiqueues-play">The street is getting busy.</h2><p>Open the shop, choose your staff and discover what the queue knows.</p><a class="button-primary" href="https://boutiqueues.com/">Play Boutiqueues <i class="fas fa-arrow-right" aria-hidden="true"></i></a></section>
+    </article>
+  </main>
+  <footer><p>&copy; <span id="year"></span> Anthony Errington. Made with care in Oxford, UK.</p></footer>
+  <script>const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');navToggle.addEventListener('click',()=>{const o=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(o))});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');navToggle.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>

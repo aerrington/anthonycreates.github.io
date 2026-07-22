@@ -704,6 +704,7 @@ footer a:hover { color: var(--accent); }
   margin-top: 12px;
   text-align: center;
 }
+.project-motion { margin: 72px 0; }
 .comic-hero .project-hero-image {
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -780,6 +781,53 @@ footer a:hover { color: var(--accent); }
   object-fit: cover;
 }
 
+/* ─── Project Collection & Case Studies ─── */
+.project-image-dark { background: #111; }
+.project-group { margin-bottom: 72px; }
+.project-group:last-child { margin-bottom: 0; }
+.project-group-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+}
+.project-group-heading h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); }
+.project-group-heading p { color: var(--text-3); font-size: 0.85rem; }
+.homepage-projects-footer { margin-top: 36px; text-align: center; }
+.origin-pair {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1.1fr 0.9fr;
+  margin: 72px 0;
+}
+.origin-pair.reverse-pair { grid-template-columns: 1.15fr 0.85fr; }
+.origin-pair img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: block;
+  width: 100%;
+}
+.origin-pair h2 { font-size: clamp(1.8rem, 3vw, 2.35rem); margin-bottom: 18px; }
+.origin-pair p:not(.project-kicker) { font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+.workflow-strip {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 64px 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--border);
+}
+.workflow-strip div { background: var(--white); padding: 24px 20px; }
+.workflow-strip span { color: var(--accent); display: block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; margin-bottom: 12px; }
+.workflow-strip strong { color: var(--text-1); display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; margin-bottom: 8px; }
+.workflow-strip p { color: var(--text-3); font-size: 0.8rem; line-height: 1.55; }
+.emojo-stage img { background: #141225; }
+
 /* ─── Scroll Animations ─── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -851,6 +899,9 @@ footer a:hover { color: var(--accent); }
   .comic-showcase { grid-template-columns: 1fr; }
   .comic-showcase-copy { padding: 8px 0; }
   .comic-showcase-wide { grid-column: auto; }
+  .origin-pair, .origin-pair.reverse-pair { gap: 28px; grid-template-columns: 1fr; }
+  .workflow-strip { grid-template-columns: 1fr; }
+  .project-group-heading { align-items: flex-start; flex-direction: column; gap: 5px; }
   .fact-strip { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
   .section, .section-alt { padding: 64px 24px; }
   #navbar { padding: 0 24px; }

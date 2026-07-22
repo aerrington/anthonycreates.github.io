@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Suggestion Machine</title>
+  <desc id="desc">A dark stage-inspired title card for Suggestion Machine</desc>
+  <rect width="1200" height="630" fill="#181511"/>
+  <g fill="none" stroke="#3a3229" stroke-width="2"><path d="M130 115h380M690 115h380"/><path d="M130 515h940"/></g>
+  <path d="M600 104l10 11-10 11-10-11z" fill="#ed9b2d"/>
+  <text x="600" y="265" text-anchor="middle" fill="#ed9b2d" font-family="Impact, Arial Narrow, sans-serif" font-size="104" letter-spacing="2">SUGGESTION</text>
+  <text x="600" y="365" text-anchor="middle" fill="#ed9b2d" font-family="Impact, Arial Narrow, sans-serif" font-size="104" letter-spacing="2">MACHINE</text>
+  <text x="600" y="435" text-anchor="middle" fill="#b3a79a" font-family="Arial, sans-serif" font-size="25" font-style="italic">From the audience to the stage.</text>
+  <text x="600" y="552" text-anchor="middle" fill="#74685c" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="5">WORKSHOPS · LIVE SHOWS · SUGGESTION BANK</text>
+</svg>
