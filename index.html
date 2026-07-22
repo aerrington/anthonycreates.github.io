@@ -15,7 +15,7 @@
   <link rel="alternate" type="application/rss+xml" href="https://anthonycreates.com/index.xml" title="Anthony Errington">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="css/modern.css">
 </head>
@@ -25,7 +25,7 @@
   <nav id="navbar">
     <div class="nav-container">
       <a class="nav-brand" href="#top">Anthony Errington</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
@@ -102,36 +102,58 @@
     <div class="section-inner">
       <div data-animate style="text-align:center">
         <p class="section-label">Work</p>
-        <h2 class="section-title centered">Projects</h2>
+        <h2 class="section-title centered">Selected Projects</h2>
+        <p class="section-intro">Games, creative practices and exhibitions shaped by curiosity, play and language.</p>
       </div>
       <div class="projects-grid">
-        <div class="project-card" data-animate data-d="1" data-modal="modal-0">
+        <a class="project-card" href="projects/always-never/index.html" data-animate data-d="1">
+          <div class="card-img-wrap">
+            <img src="projects/always-never/always-never-project-image.png" alt="Illustrated Always Never title card with a small robed Sage holding a staff and the words: The Sage is waiting">
+            <div class="card-overlay"><span>View project</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-type">Language game</p>
+            <h3>Always Never</h3>
+            <p>Improvise a strange proverb with a stubborn fictional Sage.</p>
+            <span class="card-link">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a class="project-card" href="projects/haikucraft/index.html" data-animate data-d="2">
+          <div class="card-img-wrap card-img-contain">
+            <img src="projects/haikucraft/haikucraft-og-image.png" alt="Haiku Craft — arrange the words, restore the poem">
+            <div class="card-overlay"><span>View project</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-type">Poetry game</p>
+            <h3>Haiku Craft</h3>
+            <p>Restore a scattered daily haiku—or write one for someone else to solve.</p>
+            <span class="card-link">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a class="project-card" href="projects/comicart/index.html" data-animate data-d="3">
           <div class="card-img-wrap">
             <img src="projects/comicart/cca_hu_a5d920ff1ef25f7e.png" alt="Classic Comic Art">
             <div class="card-overlay"><span>View project</span></div>
           </div>
           <div class="card-body">
+            <p class="card-type">Creative practice</p>
             <h3>Classic Comic Art</h3>
+            <p>Giving well-loved vintage comics a playful second life.</p>
+            <span class="card-link">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </div>
-        <div class="project-card" data-animate data-d="2" data-modal="modal-1">
-          <div class="card-img-wrap">
-            <img src="projects/haikucraft/HaikuCraftNew.jpg" alt="Haiku Craft">
-            <div class="card-overlay"><span>View project</span></div>
-          </div>
-          <div class="card-body">
-            <h3>Haiku Craft</h3>
-          </div>
-        </div>
-        <div class="project-card" data-animate data-d="3" data-modal="modal-2">
+        </a>
+        <a class="project-card" href="projects/holyunexpected/index.html" data-animate data-d="4">
           <div class="card-img-wrap">
             <img src="projects/holyunexpected/hex_hu_1481ebcca67048e7.jpg" alt="Holy Unexpected">
             <div class="card-overlay"><span>View project</span></div>
           </div>
           <div class="card-body">
+            <p class="card-type">Exhibition</p>
             <h3>Holy Unexpected</h3>
+            <p>Film and contemporary stained glass exploring unexpected holiness.</p>
+            <span class="card-link">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -203,46 +225,6 @@
     <p>&copy; <span id="year"></span> Anthony Errington. Made with care in Oxford, UK.</p>
   </footer>
 
-  <!-- ── Modals ── -->
-  <div class="modal-overlay" id="modal-0">
-    <div class="modal-box">
-      <button class="modal-close-btn" data-close="modal-0" aria-label="Close"><i class="fas fa-times"></i></button>
-      <div class="modal-header"><h2>Classic Comic Art</h2></div>
-      <div class="modal-body">
-        <img src="projects/comicart/cca_hu_a20b135a4ae5c25e.png" alt="Classic Comic Art">
-        <p>Since 2020 I've been upcycling tatty vintage comics and annuals into beautiful wall art and one-of-a-kind greeting cards.</p>
-        <p>I periodically restock my <a href="https://www.etsy.com/uk/shop/ClassicComicArt">Etsy Shop</a> with my latest creations.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="modal-1">
-    <div class="modal-box">
-      <button class="modal-close-btn" data-close="modal-1" aria-label="Close"><i class="fas fa-times"></i></button>
-      <div class="modal-header"><h2>Haiku Craft</h2></div>
-      <div class="modal-body">
-        <img src="projects/haikucraft/HaikuCraftNew.jpg" alt="Haiku Craft">
-        <p>Solve a curated daily Haiku puzzle by rearranging the scrambled words into their correct poetic form.</p>
-        <p>Play a random haiku puzzle from the collection.</p>
-        <p>Compose your own beautiful haiku, assisted by live syllable counting as you type, and share your creations with friends.</p>
-        <p>You can play <a href="https://haikucraft.com/">here</a>.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="modal-2">
-    <div class="modal-box">
-      <button class="modal-close-btn" data-close="modal-2" aria-label="Close"><i class="fas fa-times"></i></button>
-      <div class="modal-header"><h2>Holy Unexpected</h2></div>
-      <div class="modal-body">
-        <img src="projects/holyunexpected/hex_hu_97e12ad289ec06e7.jpg" alt="Holy Unexpected">
-        <p>Holy Unexpected is an exhibition I curated in 2017 exploring the lives of eight men and women from the British Isles who illuminated unusual or unexpected angles on the concept of a life of 'holiness'.</p>
-        <p>The exhibition featured beautiful contemporary takes on the ancient concept of stained glass representations of saints, along with a 40-minute film structured as an imagined dialogue between G.K. Chesterton and the 14th century mystic Julian of Norwich.</p>
-        <p>You can watch the video and peruse the images and text <a href="https://holy-unexpected.netlify.app/">here</a>.</p>
-      </div>
-    </div>
-  </div>
-
   <script>
     // Navbar scroll behaviour
     const navbar = document.getElementById('navbar');
@@ -254,38 +236,14 @@
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
     });
     navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Modals
-    document.querySelectorAll('[data-modal]').forEach(card => {
-      card.addEventListener('click', () => {
-        document.getElementById(card.dataset.modal).classList.add('open');
-        document.body.style.overflow = 'hidden';
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
       });
-    });
-    document.querySelectorAll('[data-close]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.getElementById(btn.dataset.close).classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-    document.querySelectorAll('.modal-overlay').forEach(overlay => {
-      overlay.addEventListener('click', e => {
-        if (e.target === overlay) {
-          overlay.classList.remove('open');
-          document.body.style.overflow = '';
-        }
-      });
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
-        document.body.style.overflow = '';
-      }
     });
 
     // Scroll animations

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Always Never — a game of improvised wisdom | Anthony Errington</title>
+  <meta name="description" content="Build a strange proverb with an ancient Sage, one word at a time, and add what you discover to the Great Archive.">
+  <link rel="canonical" href="https://anthonycreates.com/projects/always-never/">
+  <meta property="og:title" content="Always Never — a game of improvised wisdom">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Build a strange proverb with an ancient Sage, one word at a time.">
+  <meta property="og:url" content="https://anthonycreates.com/projects/always-never/">
+  <meta property="og:image" content="https://anthonycreates.com/projects/always-never/share-card-landscape.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Always Never: The Sage is waiting. Build strange wisdom together, one word at a time.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="shortcut icon" href="../../img/fav.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/modern.css">
+</head>
+<body>
+  <nav id="navbar" class="page-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="../../index.html">Anthony Errington</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html#about">About</a>
+        <a href="../index.html">Projects</a>
+        <a href="../../index.html#podcast">Podcast</a>
+        <a href="../../index.html#improv">Improv</a>
+        <a href="../../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="project-hero">
+      <div class="project-hero-inner">
+        <div class="project-hero-copy">
+          <p class="project-kicker">Language game · OpenAI Build Week 2026</p>
+          <h1 class="project-title">Always Never</h1>
+          <p class="project-deck">A tiny browser game about arguing with a fictional Sage until the two of you accidentally discover wisdom.</p>
+          <div class="project-actions">
+            <a class="button-primary" href="https://alwaysnever.uk/">Play the game <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="button-secondary" href="https://youtu.be/c_TaCXfd7Gc">Watch the 90-second demo <i class="fas fa-play" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <img class="project-hero-image" src="always-never-project-image.png" alt="Illustrated Always Never title card with a small robed Sage holding a staff and the words: The Sage is waiting">
+      </div>
+    </header>
+
+    <article class="project-content">
+      <div class="project-prose">
+        <h2>The game</h2>
+        <p>You begin with a single word. The Sage answers. Then it is your turn again. At every step you choose between four plausible directions, but the constraints are where the personality lives.</p>
+        <p>Reject all four and the Sage may offer something stranger. Refuse often enough and the Sage can fall silent. Decide the proverb is complete and you must persuade it with an intentionally absurd ritual: five emphatic Yeses.</p>
+        <p>The result might sound ancient, ridiculous, unexpectedly moving—or all three. Every completed proverb receives a permanent share page and can be placed, by choice, in the public Great Archive.</p>
+      </div>
+
+      <div class="fact-strip" aria-label="Always Never facts">
+        <div><strong>4</strong><span>choices each turn</span></div>
+        <div><strong>5</strong><span>Yeses to finish</span></div>
+        <div><strong>1,300+</strong><span>tagged words</span></div>
+        <div><strong>78</strong><span>automated tests</span></div>
+      </div>
+
+      <div class="project-gallery" aria-label="Always Never gameplay">
+        <img src="gallery/gallery-02-four-directions.jpg" alt="The proverb fragment Never linger with four possible next words offered by the Sage">
+        <img src="gallery/gallery-04-sage-is-silent.jpg" alt="The Sage sitting silently beneath the words The Sage has nothing to offer">
+        <img src="gallery/gallery-05-proverb-discovered.jpg" alt="A discovered proverb reading Never bake apples">
+      </div>
+
+      <blockquote class="project-quote">“Character comes from boundaries.”</blockquote>
+
+      <div class="project-prose">
+        <h2>Why I made it</h2>
+        <p>Always Never began as a software translation of word-at-a-time improv: meaning emerges through attention, constraint, and accepting an offer you did not choose.</p>
+        <p>The Sage became more convincing when it had fewer freedoms—a local grammar, a limited set of legal moves, rituals, refusals, silences, and strong opinions about when a sentence was finished. An unconstrained language model could produce smoother lines, but smoothness was not the point. Friction was.</p>
+
+        <h2>How it works</h2>
+        <p>At its core is a deterministic grammar engine with more than 1,300 tagged words. It knows which continuations are legal and useful. Optional AI can rank those legal choices for tone and variety, but it cannot step outside the game's rules. This keeps play fast, coherent, inexpensive, and available even when an AI service is not.</p>
+        <p>The live application runs on Cloudflare Workers and D1. It includes permanent proverb URLs, an opt-in public archive, a daily remembered proverb, and privacy-conscious event measurement.</p>
+
+        <h2>Built in public</h2>
+        <p>I designed, implemented, tested, and shipped Always Never solo for OpenAI Build Week in July 2026. Much of the work happened through one sustained Codex conversation: play a round, describe what felt wrong in player language, inspect the system, change it, and test again.</p>
+      </div>
+
+      <section class="project-cta" aria-labelledby="try-heading">
+        <h2 id="try-heading">The Sage is waiting.</h2>
+        <p>Discover something worth keeping—and, if you choose, place it in the Great Archive.</p>
+        <a class="button-primary" href="https://alwaysnever.uk/">Play Always Never <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </section>
+
+      <aside class="language-games" aria-label="More language games">
+        <p>More small language games by Anthony</p>
+        <a href="../haikucraft/index.html">Haiku Craft <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </aside>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Anthony Errington. Made with care in Oxford, UK.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
