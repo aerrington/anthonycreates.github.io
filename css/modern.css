@@ -696,6 +696,90 @@ footer a:hover { color: var(--accent); }
   font-weight: 800;
 }
 
+/* ─── Classic Comic Art ─── */
+.project-hero-figure { margin: 0; }
+.project-hero-figure figcaption {
+  color: var(--text-3);
+  font-size: 0.78rem;
+  margin-top: 12px;
+  text-align: center;
+}
+.comic-hero .project-hero-image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.comic-process { margin-top: 72px; }
+.comic-process .project-prose h2 { margin-top: 0; }
+.comic-process-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin-top: 36px;
+}
+.comic-process-grid li {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.comic-process-grid img {
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.comic-process-grid li:nth-child(2) img { object-position: center 58%; }
+.comic-process-grid li > div { padding: 24px; }
+.comic-process-grid span {
+  color: var(--accent);
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 9px;
+}
+.comic-process-grid h3 { font-size: 1.25rem; margin-bottom: 10px; }
+.comic-process-grid p { font-size: 0.92rem; line-height: 1.7; }
+.comic-quote p { margin-bottom: 12px; }
+.comic-quote cite {
+  color: var(--text-3);
+  display: block;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.comic-showcase {
+  align-items: center;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  margin: 72px 0;
+}
+.comic-showcase-image img {
+  border-radius: var(--radius-md);
+  display: block;
+  width: 100%;
+}
+.comic-showcase-copy { padding: 16px 24px; }
+.comic-showcase-copy h2 {
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  margin-bottom: 18px;
+}
+.comic-showcase-copy p:not(.project-kicker) {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.comic-showcase-wide { grid-column: 1 / -1; }
+.comic-showcase-wide img {
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
 /* ─── Scroll Animations ─── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -763,6 +847,10 @@ footer a:hover { color: var(--accent); }
   .project-content { padding: 0 24px 64px; }
   .project-gallery { grid-template-columns: 1fr; }
   .project-feature-grid { grid-template-columns: 1fr; }
+  .comic-process-grid { grid-template-columns: 1fr; }
+  .comic-showcase { grid-template-columns: 1fr; }
+  .comic-showcase-copy { padding: 8px 0; }
+  .comic-showcase-wide { grid-column: auto; }
   .fact-strip { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
   .section, .section-alt { padding: 64px 24px; }
   #navbar { padding: 0 24px; }
