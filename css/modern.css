@@ -1,4 +1,28 @@
 /* ─── Design Tokens ─── */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/NunitoSans/NunitoSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/NunitoSans/NunitoSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/NunitoSans/NunitoSans-Bold.ttf') format('truetype');
+}
+
 :root {
   --bg:           #FAF8F5;
   --bg-alt:       #F2EDE7;
