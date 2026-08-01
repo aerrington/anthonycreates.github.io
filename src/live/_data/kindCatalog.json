@@ -1,0 +1,22 @@
+{
+  "made": {
+    "label": "Made",
+    "offer": "here's a thing to look at",
+    "asset": "/live/assets/drawn/kind-made.png"
+  },
+  "learned": {
+    "label": "Learned",
+    "offer": "here's something to take away",
+    "asset": "/live/assets/drawn/kind-learned.png"
+  },
+  "scrapped": {
+    "label": "Scrapped",
+    "offer": "here's a warning",
+    "asset": "/live/assets/drawn/kind-scrapped.png"
+  },
+  "wondering": {
+    "label": "Wondering",
+    "offer": "here's a question for you",
+    "asset": "/live/assets/drawn/kind-wondering.png"
+  }
+}

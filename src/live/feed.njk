@@ -1,0 +1,24 @@
+---
+permalink: /live/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.name | xmlEscape }}</title>
+    <link>{{ site.url }}/live/</link>
+    <description>{{ site.description | xmlEscape }}</description>
+    <language>en-gb</language>
+    <lastBuildDate>{{ current.updated | rfc822 }}</lastBuildDate>
+    {% for entry in collections.liveEntries %}
+      <item>
+        <title>{{ entry.data.title | xmlEscape }}</title>
+        <link>{{ entry.url | absoluteUrl(site.url) }}</link>
+        <guid isPermaLink="true">{{ entry.url | absoluteUrl(site.url) }}</guid>
+        <pubDate>{{ entry.date | rfc822 }}</pubDate>
+        <description>{{ entry.data.description | xmlEscape }}</description>
+        <content:encoded><![CDATA[{{ entry.templateContent | safe }}]]></content:encoded>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

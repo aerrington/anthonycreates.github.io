@@ -1,0 +1,138 @@
+{
+  "daily-playhouse": {
+    "name": "The Daily Playhouse",
+    "status": "experiment",
+    "category": "games-experiments",
+    "colour": "#D2452B",
+    "glyph": "/live/assets/drawn/projects/daily-playhouse.png",
+    "projectUrl": null
+  },
+  "suggestion-machine": {
+    "name": "Suggestion Machine",
+    "status": "established",
+    "category": "tools-systems",
+    "colour": "#E07A1F",
+    "glyph": "/live/assets/drawn/projects/suggestion-machine.png",
+    "projectUrl": "/projects/suggestion-machine/"
+  },
+  "seams": {
+    "name": "Seams",
+    "status": "established",
+    "category": "games-experiments",
+    "colour": "#2B5FA8",
+    "glyph": "/live/assets/drawn/projects/seams.png",
+    "projectUrl": "/projects/seams/"
+  },
+  "always-never": {
+    "name": "Always Never",
+    "status": "established",
+    "category": "games-experiments",
+    "colour": "#1F7A4D",
+    "glyph": "/live/assets/drawn/projects/always-never.png",
+    "projectUrl": "/projects/always-never/"
+  },
+  "haikucraft": {
+    "name": "HaikuCraft",
+    "status": "established",
+    "category": "games-experiments",
+    "colour": "#7B3B8C",
+    "glyph": "/live/assets/drawn/projects/haikucraft.png",
+    "projectUrl": "/projects/haikucraft/"
+  },
+  "emojo": {
+    "name": "Emojo",
+    "status": "established",
+    "category": "games-experiments",
+    "colour": "#C4407E",
+    "glyph": "/live/assets/drawn/projects/emojo.png",
+    "projectUrl": "/projects/emojo/"
+  },
+  "classic-comic-art": {
+    "name": "Classic Comic Art",
+    "status": "established",
+    "category": "art-performance",
+    "colour": "#B85735",
+    "glyph": "/live/assets/drawn/projects/classic-comic-art.png",
+    "projectUrl": "/projects/comicart/"
+  },
+  "holy-unexpected": {
+    "name": "Holy Unexpected",
+    "status": "established",
+    "category": "art-performance",
+    "colour": "#526C63",
+    "glyph": "/live/assets/drawn/projects/holy-unexpected.png",
+    "projectUrl": "/projects/holyunexpected/"
+  },
+  "gibber": {
+    "name": "Gibber",
+    "status": "experiment",
+    "category": "games-experiments",
+    "colour": "#806A2E",
+    "glyph": null,
+    "projectUrl": null
+  },
+  "as-i-recall": {
+    "name": "As I Recall",
+    "status": "experiment",
+    "category": "art-performance",
+    "colour": "#58558F",
+    "glyph": null,
+    "projectUrl": null
+  },
+  "brick-brack-bro": {
+    "name": "Brick-Brack-Bro",
+    "status": "experiment",
+    "category": "games-experiments",
+    "colour": "#9A563E",
+    "glyph": null,
+    "projectUrl": null
+  },
+  "scraps-the-moth": {
+    "name": "Scraps / The Moth",
+    "status": "experiment",
+    "category": "tools-systems",
+    "colour": "#66567A",
+    "glyph": null,
+    "projectUrl": null
+  },
+  "castles-of-burgundy": {
+    "name": "Castles of Burgundy engine",
+    "status": "experiment",
+    "category": "tools-systems",
+    "colour": "#7A4E42",
+    "glyph": null,
+    "projectUrl": null
+  },
+  "boutiqueues": {
+    "name": "Boutiqueues",
+    "status": "established",
+    "category": "games-experiments",
+    "colour": "#8A5A2B",
+    "glyph": "/live/assets/drawn/projects/boutiqueues.png",
+    "projectUrl": "/projects/boutiqueues/"
+  },
+  "crossed-wires": {
+    "name": "Crossed Wires",
+    "status": "experiment",
+    "category": "games-experiments",
+    "colour": "#3F6C8E",
+    "glyph": "/live/assets/drawn/projects/crossed-wires.png",
+    "projectUrl": null
+  },
+  "turn-of-phrase": {
+    "name": "Turn of Phrase",
+    "status": "experiment",
+    "category": "games-experiments",
+    "colour": "#8D4A63",
+    "glyph": "/live/assets/drawn/projects/turn-of-phrase.png",
+    "projectUrl": null
+  },
+  "sounds-familiar": {
+    "name": "Sounds Familiar",
+    "status": "experiment",
+    "category": "games-experiments",
+    "colour": "#3E6F68",
+    "glyph": "/live/assets/drawn/projects/sounds-familiar.png",
+    "projectUrl": null
+  }
+}

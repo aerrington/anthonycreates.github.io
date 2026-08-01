@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+pageClass: entry-page
+---
+{% set primaryProject = projectDetails[0] %}
+<article class="entry-page__article" style="--project-colour: {{ primaryProject.colour or '#6B6560' }}">
+  <a class="back-link" href="/live/">← Live stream</a>
+
+  <header class="entry-header">
+    <div class="entry-identity">
+      <img class="entry-kind-mark" src="{{ kindDetails.asset }}" alt="" aria-hidden="true">
+      <div>
+        <p class="entry-kind">
+          <span>{{ kindDetails.label }}</span>
+          <span>— {{ kindDetails.offer }}</span>
+        </p>
+        <p class="entry-date">
+          <time datetime="{{ date | isoDate }}">{{ date | displayDate }}</time>
+          <span>·</span>
+          {% if projectDetails.length %}
+            {% for project in projectDetails %}
+              {% if project.projectUrl %}
+                <a class="entry-project" href="{{ project.projectUrl }}">
+                  {% if project.glyph %}<span class="entry-project__glyph" style="--project-colour: {{ project.colour }}; --project-glyph: url('{{ project.glyph }}')" aria-hidden="true"></span>{% endif %}
+                  <span>{{ project.name }}</span>
+                </a>
+              {% else %}
+                <span class="entry-project">
+                  {% if project.glyph %}<span class="entry-project__glyph" style="--project-colour: {{ project.colour }}; --project-glyph: url('{{ project.glyph }}')" aria-hidden="true"></span>{% endif %}
+                  <span>{{ project.name }}</span>
+                </span>
+              {% endif %}
+              {% if not loop.last %}<span>,</span>{% endif %}
+            {% endfor %}
+          {% else %}
+            <a href="/live/practice/">The practice</a>
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    <h1>{{ title }}</h1>
+  </header>
+
+  {% if image %}
+    <figure class="entry-media">
+      <img src="{{ image }}" alt="{{ imageAlt or '' }}">
+    </figure>
+  {% endif %}
+
+  <div class="entry-body">
+    {{ content | safe }}
+  </div>
+
+  <img class="drawn-divider" src="/live/assets/drawn/divider.png" alt="" aria-hidden="true">
+
+  <footer class="entry-footer">
+    <p>Written from inside the work, while the answer is still moving.</p>
+    {% if primaryProject.projectUrl %}
+      <a href="{{ primaryProject.projectUrl }}">See the finished {{ primaryProject.name }} project →</a>
+    {% else %}
+      <a href="/live/">Back to the Live stream →</a>
+    {% endif %}
+  </footer>
+</article>

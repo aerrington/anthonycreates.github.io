@@ -1,0 +1,99 @@
+---
+name: live-entry
+description: Turn the current working session into a draft entry for Anthony Creates Live. Use when Anthony says "log this", "make a live entry", "log the session", or asks for a post about what was just built, learned, scrapped or wondered about.
+---
+
+# Live Entry
+
+Anthony publishes a working notebook at anthonycreates.com/live — short, frequent,
+present-tense entries about what he's making and what working this way is teaching him.
+This skill turns a session into a draft.
+
+## Trigger
+
+"log this", "live entry", "log the session", "make that a post", or any request for a
+write-up of work just done.
+
+## What to produce
+
+A single Markdown file. Nothing else — no commentary, no options, no "here are three
+versions". One draft, ready to edit.
+
+```
+---
+title: Sentence-case, specific, no colons-as-subtitles
+date: YYYY-MM-DD
+kind: made | learned | scrapped | wondering
+projects: [slug]        # omit entirely if the entry is about practice, not a project
+draft: true             # ALWAYS true. Anthony flips this to publish.
+---
+
+Body here.
+```
+
+Save to `content/live/YYYY-MM-DD-slug.md` in the anthonycreates repo if it's available;
+otherwise output the file contents for copying.
+
+## The four kinds
+
+- **made** — something built or shipped. A screenshot or clip does most of the work; keep prose minimal.
+- **learned** — something about working this way: specifying, directing, prompting, reviewing, trusting or not trusting output. This is the core of the publication.
+- **scrapped** — abandoned, and why. Among the most-read. Never apologetic.
+- **wondering** — an open question, ending in a real invitation to reply. This is how Anthony finds out whether there's an audience for a community of practice.
+
+## House style
+
+**Write an account, not an argument.** This is the constraint — not word count. An account
+describes what happened, what was decided and why; the material already exists, so it stays
+cheap however long it runs. An argument constructs a case from scratch and is expensive even
+when short. The previous newsletter died of arguments, not of length.
+
+**Length follows the day.** Roughly 100–1,500 words. A single fix is short. A day with a
+real design decision and technical detail worth recording is long. Don't pad, don't truncate
+artificially.
+
+**If it turns into an argument**, that's fine — set `essay: true` in the front matter and
+say so, rather than forcing it back into an account.
+
+**Specific over general.** "The spec said 'friendly tone' and I got exclamation marks in
+the error states" is an entry. "AI needs clear prompts" is not. Never write a listicle of
+lessons. Never write "in today's fast-moving landscape".
+
+**Present tense, first person, working voice.** Provisional is fine. Unresolved is good —
+"I still don't know why this happens" is a legitimate ending and often the best one.
+
+**Include the failures.** Especially the ones caused by a vague brief. The governing idea
+of the publication is that at a directorial level the test becomes *what I cannot specify,
+I do not understand* — so briefs that produced mush are the most useful material available.
+
+**Don't hide the human part.** The making is AI-accelerated; the taste, judgement and
+choosing are not. That tension is the subject, not an embarrassment.
+
+**No hype, no doom.** The available genres for writing about this are both bad. Lived
+practice is the scarce thing.
+
+## Never include
+
+- Anything about Anthony's employer, its codebase, its clients or its internal work.
+- Client or workshop-participant details, or anything about a named person who hasn't consented.
+- Credentials, keys, internal URLs, or anything from a private repo.
+- Unreleased commercial specifics — pricing plans, revenue figures, launch dates.
+
+If the session's material is mostly one of the above, say so and don't write the entry.
+
+## Method
+
+1. Look back over the session for the moment that was actually interesting — a surprise, a
+   wrong turn, a decision with a real trade-off, a thing that worked better than expected.
+   One moment. Not a summary of everything that happened.
+2. Pick the kind from that moment, not from the volume of work done. A productive session
+   often yields a *learned*, not a *made*.
+3. Write it. Lead with the concrete thing, not with context-setting.
+4. If a screenshot would carry it better than prose, say which screenshot to grab.
+5. Suggest a title that could stand alone in an RSS reader.
+
+## If there's nothing worth posting
+
+Say so plainly. A session of routine work with nothing surprising in it is not an entry,
+and manufacturing one produces exactly the generic filler that makes people stop reading.
+"Nothing here worth a post — it was all plumbing" is a correct and useful answer.
