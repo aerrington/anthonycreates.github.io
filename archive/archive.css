@@ -58,6 +58,56 @@
   box-shadow: var(--shadow-lg);
 }
 
+.collection-card + .collection-card { margin-top: 42px; }
+
+.graphics-tutor-preview {
+  min-height: 560px;
+  padding: 26px;
+  display: grid;
+  grid-template-rows: 34px 36px 1fr 54px;
+  color: #111;
+  background: #dcdcdc;
+  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif;
+}
+
+.gt-window-title {
+  padding: 5px 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  background: linear-gradient(90deg, #17498e, #76a6dc);
+  font-size: .66rem;
+  font-weight: 700;
+}
+
+.gt-window-title b { width: 20px; height: 20px; display: grid; place-items: center; background: #dc640a; border: 1px solid white; font-size: .5rem; }
+.gt-menu { padding: 4px 7px; display: flex; align-items: center; gap: 12px; border: 1px solid #aaa; background: #f0f0f0; font-size: .65rem; }
+.gt-menu strong { width: 180px; padding: 5px 8px; background: white; border: 1px inset white; font-weight: 400; }
+.gt-workspace { min-height: 0; display: grid; grid-template-columns: 1fr 42%; gap: 2px; background: #888; }
+.gt-grid {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  background-image: linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.gt-grid::before { content: ""; position: absolute; left: 24%; top: 58%; width: 58%; height: 3px; transform: rotate(-22deg); transform-origin: left; background: #dc640a; }
+.gt-grid i { position: absolute; width: 28px; height: 28px; background: #111; }
+.gt-grid i:nth-child(1) { left: 25%; top: 58%; }
+.gt-grid i:nth-child(2) { left: 33%; top: 53%; }
+.gt-grid i:nth-child(3) { left: 41%; top: 48%; }
+.gt-grid i:nth-child(4) { left: 49%; top: 43%; }
+.gt-grid i:nth-child(5) { left: 57%; top: 38%; }
+.gt-grid i:nth-child(6) { left: 65%; top: 33%; }
+.gt-grid i:nth-child(n+7) { display: none; }
+.gt-code { background: #ededed; border: 1px inset white; }
+.gt-code b { padding: 7px; display: block; border-bottom: 1px solid #aaa; font-size: .7rem; }
+.gt-code code { padding: 30px 18px; display: block; color: #333; font: .61rem/2 "Courier New", monospace; }
+.gt-controls { padding: 9px; display: flex; align-items: center; justify-content: flex-end; gap: 7px; border: 1px groove white; background: #f0f0f0; }
+.gt-controls span { margin-right: auto; color: #dc640a; font-size: .55rem; font-weight: 800; letter-spacing: .1em; }
+.gt-controls button { padding: 5px 11px; border: 2px outset white; background: #eee; font-size: .6rem; }
+
 .anternet-preview {
   min-height: 560px;
   display: grid;
