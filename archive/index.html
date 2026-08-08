@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="../css/modern.css?v=20260725.1">
-  <link rel="stylesheet" href="archive.css?v=20260806.1">
+  <link rel="stylesheet" href="archive.css?v=20260808.1">
 </head>
 <body class="archive-page">
   <nav id="navbar" class="page-nav">
@@ -51,8 +51,8 @@
     <section class="collection-section" aria-labelledby="collections-heading">
       <div class="collection-heading">
         <div>
-          <p class="project-kicker">Collections / 001</p>
-          <h2 id="collections-heading">The first collection</h2>
+          <p class="project-kicker">Collections / 002</p>
+          <h2 id="collections-heading">Recovered work, revisited.</h2>
         </div>
         <p>The catalogue is beginning with the websites where many of my current interests first appeared: games, visual design, writing and making things on the web.</p>
       </div>
@@ -86,6 +86,33 @@
         </div>
       </article>
 
+      <article class="collection-card graphics-tutor-card">
+        <div class="graphics-tutor-preview" aria-hidden="true">
+          <div class="gt-window-title"><b>GT</b><span>Graphics Tutor - Line Drawing Algorithm</span></div>
+          <div class="gt-menu"><span>Algorithm</span><strong>Bresenham line</strong></div>
+          <div class="gt-workspace">
+            <div class="gt-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="gt-code"><b>Pseudo Code</b><code>WHILE x &lt; x1<br>&nbsp;&nbsp;x = x + 1<br>&nbsp;&nbsp;yi = yi + d<br>&nbsp;&nbsp;y = ROUND(yi)<br>&nbsp;&nbsp;DRAW(x,y)</code></div>
+          </div>
+          <div class="gt-controls"><span>RESTORED 2006</span><button tabindex="-1">Step</button><button tabindex="-1">Run</button></div>
+        </div>
+
+        <div class="collection-copy">
+          <div class="collection-status"><span>RESTORED SOFTWARE</span><span>2006</span></div>
+          <p class="collection-number">COLLECTION 002</p>
+          <h2>Graphics Tutor</h2>
+          <p class="collection-summary">A university computer graphics tutor recovered from surviving Java source. Experience the minimally repaired desktop application or explore a clearly labelled browser rebuild.</p>
+          <dl>
+            <div><dt>Contents</dt><dd>6 original lessons · 1 rebuilt extension</dd></div>
+            <div><dt>Access</dt><dd>Windows desktop · Web edition</dd></div>
+            <div><dt>Condition</dt><dd>Restored from surviving source</dd></div>
+          </dl>
+          <a class="collection-enter" href="https://aerrington.github.io/anthonycreates-archive/graphics-tutor/" data-local-href="http://localhost:3002/graphics-tutor/">
+            Open Graphics Tutor <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+
       <aside class="soft-launch-note">
         <span>SOFT LAUNCH</span>
         <p>The Archive is still being catalogued. For now it is available by this direct link and is deliberately absent from the main navigation and search indexes.</p>
@@ -108,8 +135,9 @@
     }));
 
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      const collectionLink = document.querySelector('[data-local-href]');
-      collectionLink.href = collectionLink.dataset.localHref;
+      document.querySelectorAll('[data-local-href]').forEach(collectionLink => {
+        collectionLink.href = collectionLink.dataset.localHref;
+      });
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
