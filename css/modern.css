@@ -322,6 +322,104 @@ p { color: var(--text-2); }
   font-size: 1.05rem;
 }
 
+/* ─── Work Areas ─── */
+.work-gateways {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 auto 64px;
+  max-width: 900px;
+}
+
+.work-gateway {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 30px;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.work-gateway:hover,
+.work-gateway:focus-visible {
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.work-gateway:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.work-gateway-type {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.work-gateway h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.work-gateway p {
+  max-width: 340px;
+}
+
+.work-gateway-link {
+  align-items: center;
+  color: var(--accent);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  gap: 8px;
+  letter-spacing: 0.06em;
+  margin-top: auto;
+  padding-top: 28px;
+  text-transform: uppercase;
+  transition: gap 0.2s var(--ease);
+}
+
+.work-gateway:hover .work-gateway-link,
+.work-gateway:focus-visible .work-gateway-link {
+  gap: 13px;
+}
+
+.work-gateway-writing {
+  background: #f7f3e8;
+  border-color: #ded6c6;
+}
+
+.work-gateway-writing .work-gateway-type,
+.work-gateway-writing .work-gateway-link {
+  color: #3d5a72;
+}
+
+.selected-projects-heading {
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+}
+
+.selected-projects-heading h3 {
+  font-size: 1.45rem;
+}
+
+.selected-projects-heading p {
+  color: var(--text-3);
+  font-size: 0.85rem;
+}
+
 /* ─── Two-Column Layout ─── */
 .two-col {
   display: grid;
@@ -957,6 +1055,8 @@ footer a:hover { color: var(--accent); }
     gap: 40px;
   }
   .two-col.reverse { direction: ltr; }
+  .work-gateways { grid-template-columns: 1fr; margin-bottom: 48px; }
+  .work-gateway { min-height: 0; }
   .projects-grid { grid-template-columns: 1fr; gap: 24px; }
   .card-body > p:not(.card-type) { min-height: 0; }
   .project-hero { padding: 112px 24px 48px; }
