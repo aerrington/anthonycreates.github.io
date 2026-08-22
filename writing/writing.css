@@ -184,6 +184,109 @@ a:focus-visible {
   margin: 0;
 }
 
+.article-shell {
+  min-height: 100vh;
+  padding: 56px 32px 80px;
+}
+
+.article-page {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.article-header {
+  border-bottom: 1px solid rgba(43, 42, 36, 0.15);
+  margin-bottom: 44px;
+  padding-bottom: 32px;
+}
+
+.article-context {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.article-context a {
+  color: var(--gold);
+}
+
+.article-page h1 {
+  color: var(--heading);
+  font-size: clamp(42px, 7vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.06;
+  margin: 0 0 18px;
+}
+
+.article-date {
+  color: var(--quiet);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.article-figure {
+  margin: 0 auto 48px;
+  max-width: 560px;
+}
+
+.article-figure img {
+  border-radius: 2px;
+  box-shadow: 0 24px 60px -20px rgba(35, 48, 62, 0.4);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.article-figure figcaption {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.article-figure figcaption p {
+  margin: 0;
+}
+
+.article-image-credit {
+  color: var(--quiet);
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px !important;
+}
+
+.article-body {
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.article-body p {
+  margin: 0;
+}
+
+.article-body p + p {
+  margin-top: 26px;
+}
+
+.article-byline {
+  align-items: baseline;
+  border-top: 1px solid rgba(43, 42, 36, 0.15);
+  color: var(--muted);
+  display: flex;
+  font-size: 15px;
+  gap: 16px;
+  margin-top: 52px;
+  padding-top: 20px;
+}
+
+.article-byline-separator {
+  color: #b3ab97;
+}
+
 .poem-shell {
   align-items: center;
   display: flex;
@@ -358,6 +461,34 @@ a:focus-visible {
   }
 
   .poem-byline-separator {
+    display: none;
+  }
+
+  .article-shell {
+    padding: 32px 20px 56px;
+  }
+
+  .article-header {
+    margin-bottom: 34px;
+    padding-bottom: 26px;
+  }
+
+  .article-body {
+    font-size: 18px;
+    line-height: 1.68;
+  }
+
+  .article-body p + p {
+    margin-top: 22px;
+  }
+
+  .article-byline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .article-byline-separator {
     display: none;
   }
 }
