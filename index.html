@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <link rel="stylesheet" href="css/modern.css?v=20260725.1">
+  <link rel="stylesheet" href="css/modern.css?v=20260820.1">
 </head>
 <body>
 
@@ -36,7 +36,7 @@
       </button>
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
         <a href="#podcast">Podcast</a>
         <a href="#improv">Improv</a>
         <a href="#contact">Contact</a>
@@ -49,7 +49,7 @@
     <div class="hero-left">
       <p class="hero-greeting">Hi, I'm</p>
       <h1 class="hero-name">Anthony<br>Errington</h1>
-      <p class="hero-tagline">Software engineer, teacher &amp; improvisor<br>with a passion for exploring creativity<br>in all its forms.</p>
+      <p class="hero-tagline">Software engineer, designer, teacher &amp; improvisor<br>with a passion for exploring creativity<br>in all its forms.</p>
       <div class="hero-socials">
         <a href="https://www.youtube.com/@anthonyerrington3647" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="https://open.spotify.com/show/1mpeeuZHIc63Owpvq75kiS?si=E1bat_D7R7azGb52BIyLVA" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
@@ -89,6 +89,7 @@
           <h4>Things I do</h4>
           <ul>
             <li>Write at <a href="https://anthonyerrington.substack.com/">The Improvised Life</a> on Substack</li>
+            <li>Publish <a href="writing/index.html">poems and other writing</a></li>
             <li>Host the <a href="https://open.spotify.com/show/1mpeeuZHIc63Owpvq75kiS?si=E1bat_D7R7azGb52BIyLVA">Creative Rehab Podcast</a></li>
             <li>Perform Improv Comedy with the <a href="https://www.awkwardactors.co.uk/">Awkward Actors</a> in Oxford, UK</li>
             <li>Creative coding and app development</li>
@@ -101,13 +102,34 @@
     </div>
   </section>
 
-  <!-- ── Projects ── -->
-  <section id="projects" class="section-alt">
+  <!-- ── Work ── -->
+  <section id="work" class="section-alt">
     <div class="section-inner">
       <div data-animate style="text-align:center">
         <p class="section-label">Work</p>
-        <h2 class="section-title centered">Selected Projects</h2>
-        <p class="section-intro">Games, creative practices and exhibitions shaped by curiosity, play and language.</p>
+        <h2 class="section-title centered">Projects and writing</h2>
+        <p class="section-intro">Recent projects, poems and other pieces.</p>
+      </div>
+
+      <div class="work-gateways" aria-label="Work areas">
+        <a class="work-gateway" href="projects/index.html" data-animate data-d="1">
+          <span class="work-gateway-type">Recent work</span>
+          <h3>Projects</h3>
+          <p>Games, tools, creative practices and exhibitions.</p>
+          <span class="work-gateway-link">Browse projects <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <a class="work-gateway work-gateway-writing" href="writing/index.html" data-animate data-d="2">
+          <span class="work-gateway-type">Poems and pieces</span>
+          <h3>Writing</h3>
+          <p>Short poems and other pieces.</p>
+          <span class="work-gateway-link">Browse writing <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+
+      <div class="selected-projects-heading" data-animate>
+        <h3>Selected projects</h3>
+        <p>Recent work</p>
       </div>
       <div class="projects-grid">
         <a class="project-card" href="projects/seams/index.html" data-animate data-d="1">
@@ -241,7 +263,7 @@
 
   <!-- ── Footer ── -->
   <footer>
-    <p>&copy; <span id="year"></span> Anthony Errington. Made with care in Oxford, UK.</p>
+    <p>&copy; <span id="year"></span> Anthony Errington. Made with care in Oxford, UK. <a href="archive/index.html">Archive</a>.</p>
   </footer>
 
   <script>
