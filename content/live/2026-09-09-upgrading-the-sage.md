@@ -5,6 +5,8 @@ kind: made
 projects: [always-never]
 image: /live/assets/images/always-never-sage.png
 imageAlt: The Sage from Always Never, wearing a dark green pointed hat and robe and holding a staff
+modelPreview: >
+  A look at two recent changes to Always Never: giving the Sage a wider range of visual moods, and improving the system that chooses his words. The second part gets into grammar, semantic distance, deliberate oddness and why the game can still suggest cracking a rope.
 draft: false
 ---
 

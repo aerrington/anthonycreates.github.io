@@ -34,6 +34,15 @@ function validateEntry(data) {
     throw new Error(`${data.page.inputPath}: projects must be a YAML list.`);
   }
 
+  for (const field of ["preview", "modelPreview"]) {
+    if (
+      data[field] !== undefined &&
+      (typeof data[field] !== "string" || !data[field].trim())
+    ) {
+      throw new Error(`${data.page.inputPath}: ${field} must be non-empty text.`);
+    }
+  }
+
   for (const slug of data.projects ?? []) {
     if (!data.projectCatalog[slug]) {
       throw new Error(
@@ -79,6 +88,19 @@ export default {
         slug,
         ...data.projectCatalog[slug],
       }));
+    },
+    streamPreview(data) {
+      validateEntry(data);
+
+      if (data.preview?.trim()) {
+        return { text: data.preview.trim(), source: "author" };
+      }
+
+      if (data.modelPreview?.trim()) {
+        return { text: data.modelPreview.trim(), source: "model" };
+      }
+
+      return null;
     },
     description(data) {
       validateEntry(data);

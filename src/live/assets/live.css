@@ -378,9 +378,75 @@ img {
   margin-top: 0;
 }
 
+.stream-entry__preview {
+  max-width: 60ch;
+}
+
+.stream-entry__teaser--with-media {
+  align-items: start;
+  display: grid;
+  gap: 1.35rem;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  max-width: 44rem;
+}
+
+.stream-entry__teaser-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.stream-entry__preview--model {
+  background: #f1f2ef;
+  border: 1px solid #d8dad5;
+  border-left: 4px solid var(--pencil);
+  color: #45433f;
+  padding: 1rem 1.15rem 1.1rem;
+}
+
+.stream-entry__preview p {
+  margin: 0;
+}
+
+.stream-entry__preview p + p {
+  margin-top: 0.65rem;
+}
+
+.stream-entry__preview .stream-entry__preview-label {
+  color: var(--pencil);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.stream-entry__read-more {
+  align-self: flex-start;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
 .stream-entry__media {
   margin: 0.25rem 0;
   max-width: 38rem;
+}
+
+.stream-entry__media--compact {
+  margin: 0;
+  width: 100%;
+}
+
+.stream-entry__media--compact a,
+.stream-entry__media--compact img {
+  display: block;
+}
+
+.stream-entry__media--compact img {
+  height: auto;
+  width: 100%;
 }
 
 .reply-invitation {
@@ -1007,6 +1073,15 @@ img {
 
   .stream-entry__body {
     font-size: 0.98rem;
+  }
+
+  .stream-entry__teaser--with-media {
+    gap: 0.85rem;
+    grid-template-columns: 5.75rem minmax(0, 1fr);
+  }
+
+  .stream-entry__preview--model {
+    padding: 0.8rem 0.9rem 0.9rem;
   }
 
   .earlier-entry {

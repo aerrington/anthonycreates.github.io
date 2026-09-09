@@ -26,15 +26,33 @@
 
   <h2><a href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
 
-  {% if entry.data.image %}
-    <figure class="stream-entry__media">
-      <img src="{{ entry.data.image }}" alt="{{ entry.data.imageAlt or '' }}">
-    </figure>
+  {% if entry.data.streamPreview %}
+    <div class="stream-entry__teaser{% if entry.data.image %} stream-entry__teaser--with-media{% endif %}">
+      {% if entry.data.image %}
+        <figure class="stream-entry__media stream-entry__media--compact">
+          <a href="{{ entry.url }}"><img src="{{ entry.data.image }}" alt="{{ entry.data.imageAlt or '' }}"></a>
+        </figure>
+      {% endif %}
+      <div class="stream-entry__teaser-copy">
+        <div class="stream-entry__preview{% if entry.data.streamPreview.source == 'model' %} stream-entry__preview--model{% endif %}">
+          <p class="stream-entry__preview-label">
+            {% if entry.data.streamPreview.source == "model" %}Preview from the model{% else %}In this entry{% endif %}
+          </p>
+          <p>{{ entry.data.streamPreview.text }}</p>
+        </div>
+        <a class="stream-entry__read-more" href="{{ entry.url }}">Read the full entry →</a>
+      </div>
+    </div>
+  {% else %}
+    {% if entry.data.image %}
+      <figure class="stream-entry__media">
+        <img src="{{ entry.data.image }}" alt="{{ entry.data.imageAlt or '' }}">
+      </figure>
+    {% endif %}
+    <div class="stream-entry__body">
+      {{ entry.templateContent | safe }}
+    </div>
   {% endif %}
-
-  <div class="stream-entry__body">
-    {{ entry.templateContent | safe }}
-  </div>
 
   {% if entry.data.kind == "wondering" %}
     <div class="reply-invitation">

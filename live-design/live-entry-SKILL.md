@@ -34,6 +34,28 @@ Body here.
 Save to `content/live/YYYY-MM-DD-slug.md` in the anthonycreates repo if it's available;
 otherwise output the file contents for copying.
 
+## Stream previews
+
+Short entries appear in full on the Live stream. For a longer entry, add a 50–90 word
+preview that tells the reader what the entry contains without trying to summarise every
+point:
+
+```yaml
+modelPreview: >
+  A concise preview written by the model.
+```
+
+The stream labels this text `Preview from the model` and links to the full entry. If
+Anthony rewrites the preview in his own words, add it separately:
+
+```yaml
+preview: >
+  Anthony's version of the preview.
+```
+
+`preview` always takes priority over `modelPreview`. Keep the model version as a fallback
+unless Anthony asks to remove it. An entry with neither field continues to appear in full.
+
 ## The four kinds
 
 - **made** — something built or shipped. A screenshot or clip does most of the work; keep prose minimal.
