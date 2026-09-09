@@ -50,8 +50,18 @@ for an entry about the practice rather than a particular project. Project slugs
 must exist in `src/live/_data/projectCatalog.json`.
 
 Drafts appear locally but generate no production page, feed item or sitemap
-entry. Set `draft: false` to publish. The current implementation targets
-100–300 words and rejects entries over 500 words.
+entry. Set `draft: false` to publish. Entry length follows the material, with a
+hard ceiling of 1,500 words.
+
+Longer entries can include a model-written stream preview:
+
+```yaml
+modelPreview: >
+  A short preview of what the full entry contains.
+```
+
+It is labelled as model-written on the Live stream. Add an author-written
+`preview` field to override it; entries without either field appear in full.
 
 Images can sit beside the Markdown entry and be referenced with a relative path.
 Add useful alternative text with `imageAlt` when using the front-matter `image`
@@ -84,14 +94,15 @@ not send automatically.
 
 ## Current launch status
 
-The first implementation slice is complete locally. Before launch:
+The Live implementation is ready to merge. Two entries are published, longer
+entries support compact previews, the main site links prominently to Live, and
+the GitHub Pages workflow builds the complete Eleventy output.
 
-1. Write two more launch entries, including at least one project entry.
-2. Test entries with zero, one and multiple projects.
-3. Add a prominent route into Live from the main site.
-4. Add and verify the GitHub Pages build/deployment workflow.
-5. Run a clean production build and final responsive/accessibility QA.
-6. Time the end-to-end publishing flow; the target is under five minutes.
+After merging:
 
-The only current entry is a draft Practice entry, so a clean production build
-correctly has an empty Live stream.
+1. Confirm that the repository’s Pages source is set to **GitHub Actions**.
+2. Verify the first deployment at `/live/`, including its feed and both entries.
+3. Run final responsive and accessibility checks on the deployed site.
+4. Connect Buttondown to `/live/feed.xml`, creating newsletter drafts rather
+   than sending automatically.
+5. Time the end-to-end publishing flow; the target is under five minutes.

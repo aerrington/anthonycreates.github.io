@@ -44,7 +44,9 @@ export default function (eleventyConfig) {
     "css",
     "fonts",
     "home",
+    "archive",
     "projects",
+    "writing",
   ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 
   eleventyConfig.addPassthroughCopy({
@@ -127,19 +129,19 @@ export default function (eleventyConfig) {
     }
 
     const match = content.match(
-      /<div class="entry-body">([\s\S]*?)<\/div>\s*<div class="drawn-divider-placeholder"/,
+      /<div class="entry-body">([\s\S]*?)<\/div>\s*<img class="drawn-divider"/,
     );
     const wordCount = plainText(match?.[1] ?? "").split(/\s+/).filter(Boolean).length;
 
-    if (wordCount > 500) {
+    if (wordCount > 1500) {
       throw new Error(
-        `${this.page.inputPath}: Live entries have a hard ceiling of 500 words (found ${wordCount}).`,
+        `${this.page.inputPath}: Live entries have a hard ceiling of 1,500 words (found ${wordCount}).`,
       );
     }
 
-    if (wordCount > 300) {
+    if (wordCount > 1000) {
       console.warn(
-        `[Live] ${this.page.inputPath} is ${wordCount} words; the target is 100–300.`,
+        `[Live] ${this.page.inputPath} is ${wordCount} words; consider whether it still reads as an account rather than an essay.`,
       );
     }
 
