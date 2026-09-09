@@ -172,7 +172,7 @@ rather than a gap.
 
 Contains, in order:
 1. **Wordmark** — hand-lettered, scanned.
-2. **Strapline**, verbatim: *What I'm making, learning, abandoning and still trying to understand.*
+2. **Strapline**, verbatim: *A peek inside my digital sketchbook.*
 3. **Entry count**, shown openly: "3 entries". Do not hide it.
 4. **The now line** — one sentence on what's being worked on this month. Editable in one
    place (a data file or global front matter), updated monthly. **Must not be hard-coded
@@ -216,7 +216,9 @@ migration. **Ship this in v0**, even though only three entries will exist.
 
 - Newsletter capture — the most important conversion element on the page.
 - RSS link to `/live/feed.xml`.
-- Sign-off, verbatim: *Work in progress, shared without a second take.*
+- Newsletter heading: *Notes from Anthony’s desk.*
+- Description: *Occasional emails about what I’m working on, what I’m discovering, and
+  interesting ideas I come across. I hope they might support your own creativity too.*
 
 ---
 

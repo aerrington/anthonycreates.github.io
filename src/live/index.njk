@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Anthony Creates Live
-description: What I'm making, learning, abandoning and still trying to understand.
+description: A peek inside my digital sketchbook.
 permalink: /live/index.html
 pageClass: stream-page
 ---
@@ -9,11 +9,11 @@ pageClass: stream-page
   <div class="masthead__top">
     <div class="masthead__lead">
       <img class="live-wordmark" src="/live/assets/drawn/live-wordmark.png" alt="Anthony Creates Live">
-      <h1>What I'm making, learning, abandoning and still trying to understand.</h1>
+      <h1>A peek inside my digital sketchbook.</h1>
     </div>
     <div class="masthead__count">
       <strong>{{ collections.liveEntries.length }} entr{% if collections.liveEntries.length == 1 %}y{% else %}ies{% endif %}</strong>
-      <p>Just started. Finished work lives in <a href="/projects/">Projects</a>.</p>
+      <p>Finished work is in <a href="/projects/">Projects</a>.</p>
       <a href="/live/feed.xml">RSS</a>
     </div>
   </div>
@@ -35,8 +35,8 @@ pageClass: stream-page
       {% include "components/stream-entry.njk" %}
     {% else %}
       <div class="empty-stream">
-        <h2>The notebook is open.</h2>
-        <p>The first published entry will appear here.</p>
+        <h2>No entries yet.</h2>
+        <p>I’m still getting the first one ready.</p>
       </div>
     {% endfor %}
 
