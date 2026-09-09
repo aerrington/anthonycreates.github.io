@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: The practice
+description: Entries about working this way rather than about any one project.
+permalink: /live/practice/index.html
+pageClass: listing-page
+---
+<header class="section-header">
+  <p class="section-kicker">The practice</p>
+  <h1>Notes about how I make things.</h1>
+  <p>What I tried, how I used the tools, what I trusted, and what made me change my mind.</p>
+</header>
+
+<section class="practice-list" aria-label="Practice entries">
+  {% for entry in collections.livePracticeEntries %}
+    {% include "components/stream-entry.njk" %}
+  {% else %}
+    <div class="empty-stream">
+      <h2>No published practice entries yet.</h2>
+      <p>They’ll appear here as I add them.</p>
+    </div>
+  {% endfor %}
+</section>

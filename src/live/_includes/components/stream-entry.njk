@@ -1,0 +1,62 @@
+{% set project = entry.data.projectDetails[0] %}
+<article class="stream-entry" style="--project-colour: {{ project.colour or '#6B6560' }}">
+  <div class="entry-identity">
+    <img class="entry-kind-mark" src="{{ entry.data.kindDetails.asset }}" alt="" aria-hidden="true">
+    <div>
+      <p class="entry-kind">
+        <span>{{ entry.data.kindDetails.label }}</span>
+        <span>— {{ entry.data.kindDetails.offer }}</span>
+      </p>
+      <p class="entry-date">
+        <time datetime="{{ entry.date | isoDate }}">{{ entry.date | displayDate }}</time>
+        <span>·</span>
+        {% if entry.data.projectDetails.length %}
+          {% for item in entry.data.projectDetails %}
+            <span class="entry-project">
+              {% if item.glyph %}<span class="entry-project__glyph" style="--project-colour: {{ item.colour }}; --project-glyph: url('{{ item.glyph }}')" aria-hidden="true"></span>{% endif %}
+              <span>{{ item.name }}</span>
+            </span>{% if not loop.last %}<span>,</span>{% endif %}
+          {% endfor %}
+        {% else %}
+          <a href="/live/practice/">The practice</a>
+        {% endif %}
+      </p>
+    </div>
+  </div>
+
+  <h2><a href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
+
+  {% if entry.data.streamPreview %}
+    <div class="stream-entry__teaser{% if entry.data.image %} stream-entry__teaser--with-media{% endif %}">
+      {% if entry.data.image %}
+        <figure class="stream-entry__media stream-entry__media--compact">
+          <a href="{{ entry.url }}"><img src="{{ entry.data.image }}" alt="{{ entry.data.imageAlt or '' }}"></a>
+        </figure>
+      {% endif %}
+      <div class="stream-entry__teaser-copy">
+        <div class="stream-entry__preview{% if entry.data.streamPreview.source == 'model' %} stream-entry__preview--model{% endif %}">
+          <p class="stream-entry__preview-label">
+            {% if entry.data.streamPreview.source == "model" %}Preview from the model{% else %}In this entry{% endif %}
+          </p>
+          <p>{{ entry.data.streamPreview.text }}</p>
+        </div>
+        <a class="stream-entry__read-more" href="{{ entry.url }}">Read the full entry →</a>
+      </div>
+    </div>
+  {% else %}
+    {% if entry.data.image %}
+      <figure class="stream-entry__media">
+        <img src="{{ entry.data.image }}" alt="{{ entry.data.imageAlt or '' }}">
+      </figure>
+    {% endif %}
+    <div class="stream-entry__body">
+      {{ entry.templateContent | safe }}
+    </div>
+  {% endif %}
+
+  {% if entry.data.kind == "wondering" %}
+    <div class="reply-invitation">
+      <a href="mailto:{{ site.replyEmail }}?subject=Anthony%20Creates%20Live%20reply">Send me a reply</a>
+    </div>
+  {% endif %}
+</article>

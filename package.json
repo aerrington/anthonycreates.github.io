@@ -1,0 +1,14 @@
+{
+  "name": "anthony-creates",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "build:preview": "LIVE_INCLUDE_DRAFTS=1 eleventy",
+    "dev": "LIVE_INCLUDE_DRAFTS=1 eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6"
+  }
+}
