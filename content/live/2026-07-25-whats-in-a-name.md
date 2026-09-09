@@ -2,7 +2,7 @@
 title: What's in a name?
 date: 2026-07-25
 kind: wondering
-draft: true
+draft: false
 ---
 
 When I registered anthonycreates.com, I was a little disappointed that anthonyerrington.com was already taken. So this was very much a second choice.

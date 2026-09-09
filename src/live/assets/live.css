@@ -740,6 +740,56 @@ img {
   margin: 1.15rem 0;
 }
 
+.entry-inline-image {
+  margin: 2rem 0;
+  max-width: 34rem;
+}
+
+.entry-inline-image > a:first-child {
+  display: block;
+}
+
+.entry-inline-image img {
+  border: 1px solid var(--rule);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.entry-inline-image figcaption {
+  color: var(--pencil);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  margin-top: 0.55rem;
+}
+
+.model-text {
+  background: #f1f2ef;
+  border: 1px solid #d8dad5;
+  border-left: 4px solid var(--pencil);
+  color: #45433f;
+  margin: 2rem 0;
+  padding: 1.2rem 1.4rem 1.35rem;
+}
+
+.model-text .model-text__label {
+  color: var(--pencil);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.model-text p {
+  margin: 1rem 0 0;
+}
+
+.model-text p:first-of-type {
+  margin-top: 0;
+}
+
 .drawn-divider {
   display: block;
   height: 0.85rem;
