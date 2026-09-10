@@ -3,8 +3,8 @@ title: Preserving a Brighton notebook
 date: 2026-09-10
 kind: learned
 projects: [brighton2026]
-modelPreview: >
-  Two weeks of improv intensives in Brighton left one notebook full of scribbles. This entry follows the notes from photographs and spoken recollections, through a chat that interrogated them line by line, to two canonical markdown files, a design brief, a design journey called Stick or Twist, generated illustrations and a built website.
+preview: >
+  Two weeks of improv intensives in Brighton, and one notebook full of scribbles. This entry documents how I experimented using photos of my notes and my spoken recollections to design and build a website to preserve my memories and share what I'd learned with the rest of my improv troupe.
 draft: false
 ---
 
