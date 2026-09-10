@@ -3,6 +3,9 @@ title: Preserving a Brighton notebook
 date: 2026-09-10
 kind: learned
 projects: [brighton2026]
+image: /live/assets/images/brighton2026-sunshine.png
+imageAlt: A hand-drawn yellow sun with the words brighton sunshine written underneath
+imageSize: small
 preview: >
   Two weeks of improv intensives in Brighton, and one notebook full of scribbles. This entry documents how I experimented using photos of my notes and my spoken recollections to design and build a website to preserve my memories and share what I'd learned with the rest of my improv troupe.
 draft: false

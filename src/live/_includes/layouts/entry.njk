@@ -45,7 +45,7 @@ pageClass: entry-page
   </header>
 
   {% if image %}
-    <figure class="entry-media">
+    <figure class="entry-media{% if imageSize == 'small' %} entry-media--small{% endif %}">
       <img src="{{ image }}" alt="{{ imageAlt or '' }}">
     </figure>
   {% endif %}

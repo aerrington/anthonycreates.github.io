@@ -19,7 +19,7 @@
   {% if entry.data.streamPreview %}
     <div class="stream-entry__teaser{% if entry.data.image %} stream-entry__teaser--with-media{% endif %}">
       {% if entry.data.image %}
-        <figure class="stream-entry__media stream-entry__media--compact">
+        <figure class="stream-entry__media stream-entry__media--compact{% if entry.data.imageSize == 'small' %} stream-entry__media--small{% endif %}">
           <a href="{{ entry.url }}"><img src="{{ entry.data.image }}" alt="{{ entry.data.imageAlt or '' }}"></a>
         </figure>
       {% endif %}

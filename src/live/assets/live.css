@@ -118,6 +118,8 @@ button { cursor: pointer; }
 .entry-date a { text-decoration: none; }
 .entry-header h1 { font: 700 clamp(2.45rem, 7vw, 4.75rem)/1.02 var(--display); letter-spacing: -.03em; margin: 26px 0 0; overflow-wrap: anywhere; }
 .entry-media { margin: 44px 0; }
+.entry-media--small { max-width: 220px; }
+.entry-media--small img, .stream-entry__media--small img { mix-blend-mode: multiply; }
 .entry-body { font-size: clamp(1.08rem,2.5vw,1.24rem); line-height: 1.72; margin: 44px 0; max-width: 39rem; overflow-wrap: anywhere; }
 .entry-body p { margin: 1.15rem 0; }
 .entry-inline-image { margin: 2rem 0; max-width: 34rem; }
