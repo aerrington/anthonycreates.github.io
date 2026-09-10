@@ -5,7 +5,7 @@ kind: learned
 projects: [brighton2026]
 modelPreview: >
   Two weeks of improv intensives in Brighton left one notebook full of scribbles. This entry follows the notes from photographs and spoken recollections, through a chat that interrogated them line by line, to two canonical markdown files, a design brief, a design journey called Stick or Twist, generated illustrations and a built website.
-draft: true
+draft: false
 ---
 
 Two weeks of improv intensives in Brighton this summer, and one notebook packed full of my scribbles and jottings on the various warmups, exercises and formats we covered. I was curious to see how LLMs could help me to make sense of those notes and turn them into a permanent record of the experience, and a useful resource for sharing the ideas I'd encountered with others in my improv troupe.
@@ -25,7 +25,7 @@ That got me as far as two canonical markdown files summarising the material, one
 I knew I wanted the two weeks to each have a related but complementary look and feel. Musical improv had felt very silly and sunny, the long-form week a little more serious, and it had coincided with the solar eclipse that week. From my initial chat I created a design brief which I handed over to Claude Design. Here's a summary of how the design progressed for week one:
 
 <figure class="entry-inline-image">
-<a href="/live/assets/images/brighton2026-stick-or-twist-design-journey.png"><img src="/live/assets/images/brighton2026-stick-or-twist-design-journey.png" alt="A design journey page titled Stick or Twist, showing six moves from brief to finished page: the first chart, eight directions, bolder and scribblier variants, the brief twisting into a two-week story, commissioned red-and-black line drawings, and the annotated chart synthesis" width="2000" height="1387" loading="lazy" decoding="async"></a>
+<a href="/live/assets/images/brighton2026-stick-or-twist-design-journey.png"><img src="/live/assets/images/brighton2026-stick-or-twist-design-journey.png" alt="A design journey page titled Stick or Twist, showing six moves from brief to finished page: the first chart, eight directions, bolder and scribblier variants, the brief twisting into a two-week story, commissioned red-and-black line drawings, and the annotated chart synthesis" width="2800" height="1942" loading="lazy" decoding="async"></a>
 <figcaption>Stick or Twist: the design journey for the week one page, from brief to page in six moves.</figcaption>
 </figure>
 
