@@ -134,5 +134,13 @@
     "colour": "#3E6F68",
     "glyph": "/live/assets/drawn/projects/sounds-familiar.png",
     "projectUrl": null
+  },
+  "brighton2026": {
+    "name": "Brighton 2026",
+    "status": "experiment",
+    "category": "art-performance",
+    "colour": "#2C7A8C",
+    "glyph": null,
+    "projectUrl": null
   }
 }
