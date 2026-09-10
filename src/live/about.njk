@@ -5,7 +5,9 @@ description: "A peek inside Anthony’s digital sketchbook."
 permalink: /live/about/index.html
 pageClass: about-page
 ---
-<article class="about-content">
+<div class="reading-desk">
+<a class="back-link" href="/live/">← Live</a>
+<div class="paper-sheet reading-sheet"><article class="about-content">
   <header class="section-header">
     <p class="section-kicker">About Live</p>
     <h1>A peek inside my digital sketchbook.</h1>
@@ -20,6 +22,11 @@ pageClass: about-page
     <h2>What appears here</h2>
     <p>Updates on things I’m making, useful discoveries, things I decide not to pursue, and questions I haven’t answered yet. These are notes from the work rather than polished essays.</p>
 
+    <div class="kinds-legend" aria-label="Four kinds of entry">
+      {% for key, kind in kindCatalog %}
+        <div class="kinds-legend__item"><img src="{{ kind.asset }}" alt="" aria-hidden="true"><div><strong>{{ kind.label }}</strong><p>{{ kind.offer }}</p></div></div>
+      {% endfor %}
+    </div>
     <h2>Writing</h2>
     <p>While I use generative tools to test my ideas and build things quickly, I’m less of a fan of using them to articulate my thoughts and experiences. I try and keep the words you read here my own. I’ve written more about my thinking in <a href="https://anthonycreates.com/writing/on-writing-and-ai/">On Writing and AI</a>.</p>
     <p>When I include words produced by a model, they are labelled “From the model” and set apart visually. Everything else is my own writing, apart from corrections to spelling and grammar.</p>
@@ -27,4 +34,9 @@ pageClass: about-page
     <h2>Who it is for</h2>
     <p>Anyone interested in making things, or finding their way back to their own creativity. I hope something here is useful, encouraging or simply interesting.</p>
   </div>
-</article>
+  <section class="about-signup" aria-label="Subscribe to notes from Anthony’s desk">
+    <h2>Notes from Anthony’s desk.</h2>
+    {% set newsletterId = "about" %}
+    {% include "components/newsletter-signup.njk" %}
+  </section>
+</article></div></div>

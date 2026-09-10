@@ -3,8 +3,11 @@ layout: layouts/base.njk
 pageClass: entry-page
 ---
 {% set primaryProject = projectDetails[0] %}
+<div class="reading-desk">
+<a class="back-link" href="/live/">← Live</a>
+<div class="paper-sheet reading-sheet">
 <article class="entry-page__article" style="--project-colour: {{ primaryProject.colour or '#6B6560' }}">
-  <a class="back-link" href="/live/">← Live stream</a>
+  <img class="sheet-watermark" src="{{ kindDetails.asset }}" alt="" aria-hidden="true">
 
   <header class="entry-header">
     <div class="entry-identity">
@@ -54,11 +57,12 @@ pageClass: entry-page
   <img class="drawn-divider" src="/live/assets/drawn/divider.png" alt="" aria-hidden="true">
 
   <footer class="entry-footer">
-    <p>A note from my digital sketchbook.</p>
+    <a href="/live/">Back to the stream</a>
     {% if primaryProject.projectUrl %}
-      <a href="{{ primaryProject.projectUrl }}">See the finished {{ primaryProject.name }} project →</a>
-    {% else %}
-      <a href="/live/">Back to the Live stream →</a>
+      <a href="{{ primaryProject.projectUrl }}">More on {{ primaryProject.name }} →</a>
+
     {% endif %}
   </footer>
 </article>
+</div>
+</div>
