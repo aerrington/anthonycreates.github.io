@@ -1,5 +1,5 @@
 ---
-title: Interrogating my notebook
+title: Preserving a Brighton notebook
 date: 2026-09-10
 kind: learned
 projects: [brighton2026]
@@ -31,4 +31,4 @@ I knew I wanted the two weeks to each have a related but complementary look and 
 
 I used GPT Image 2.0 to generate the illustrations which I decided I wanted to accompany the activities.
 
-I then fed my final design along with the canonical content files to Claude Code to build the website. You can explore it [here](https://example.com/URL-TO-COME).
+I then fed my final design along with the canonical content files to Claude Code to build the website. You can explore it [here](https://brighton2026.pages.dev/).
