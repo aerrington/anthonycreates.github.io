@@ -856,6 +856,14 @@ img {
   margin-top: 0;
 }
 
+.model-text ul {
+  padding-left: 1.25rem;
+}
+
+.model-text li + li {
+  margin-top: 0.6rem;
+}
+
 .drawn-divider {
   display: block;
   height: 0.85rem;
