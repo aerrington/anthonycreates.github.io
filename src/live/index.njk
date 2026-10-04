@@ -6,92 +6,27 @@ permalink: /live/index.html
 pageClass: stream-page
 ---
 <header class="masthead">
-  <div class="masthead__top">
-    <div class="masthead__lead">
-      <img class="live-wordmark" src="/live/assets/drawn/live-wordmark.png" alt="Anthony Creates Live">
-      <h1>A peek inside my digital sketchbook.</h1>
-    </div>
-    <div class="masthead__count">
-      <strong>{{ collections.liveEntries.length }} entr{% if collections.liveEntries.length == 1 %}y{% else %}ies{% endif %}</strong>
-      <p>Finished work is in <a href="/projects/">Projects</a>.</p>
-      <a href="/live/feed.xml">RSS</a>
-    </div>
+  <div class="masthead__lead">
+    <img class="live-wordmark" src="/live/assets/drawn/live-wordmark.png" alt="Anthony Creates Live">
+    <h1>A peek inside my digital sketchbook.</h1>
   </div>
-
-  <img class="drawn-rule" src="/live/assets/drawn/divider.png" alt="" aria-hidden="true">
-
-  <div class="now-line">
-    <p><span>Now</span><span>{{ current.month }}</span></p>
-    <div>
-      <strong>{{ current.text }}</strong>
-      <span>Updated {{ current.updated | displayDate }}</span>
+  <aside class="now-scrap" aria-label="Currently">
+    <div class="now-card">
+      <p class="section-kicker">Now · {{ current.month }}</p>
+      <p class="now-card__text">{{ current.text }}</p>
+      <p class="now-card__summary">{{ collections.liveEntries.length }} entr{% if collections.liveEntries.length == 1 %}y{% else %}ies{% endif %} · <a href="/live/practice/">The practice</a>{% for project in collections.liveProjects %} · {% if project.projectUrl %}<a href="{{ project.projectUrl }}">{{ project.name }}</a>{% else %}{{ project.name }}{% endif %}{% endfor %}</p>
     </div>
-  </div>
+  </aside>
 </header>
-
 <div class="stream-layout">
   <section class="stream-list" aria-label="Live entries">
     {% for entry in collections.liveEntries | take(3) %}
       {% include "components/stream-entry.njk" %}
     {% else %}
-      <div class="empty-stream">
-        <h2>No entries yet.</h2>
-        <p>I’m still getting the first one ready.</p>
-      </div>
+      <div class="paper-sheet"><div class="empty-stream"><h2>No entries yet.</h2><p>I’m still getting the first one ready.</p></div></div>
     {% endfor %}
-
-    {% set earlierEntries = collections.liveEntries | drop(3) %}
-    {% if earlierEntries.length %}
-      <section class="earlier-entries" aria-labelledby="earlier-heading">
-        <h2 id="earlier-heading">Earlier</h2>
-        {% for entry in earlierEntries %}
-          {% set project = entry.data.projectDetails[0] %}
-          <article class="earlier-entry" style="--project-colour: {{ project.colour or '#6B6560' }}">
-            <time datetime="{{ entry.date | isoDate }}">{{ entry.date | displayDate }}</time>
-            <img class="earlier-entry__mark" src="{{ entry.data.kindDetails.asset }}" alt="" aria-hidden="true">
-            <span class="earlier-entry__kind">{{ entry.data.kindDetails.label }}</span>
-            <h3><a href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
-            <span class="earlier-entry__project">
-              {% if project.glyph %}<span class="earlier-entry__project-glyph" style="--project-glyph: url('{{ project.glyph }}')" aria-hidden="true"></span>{% endif %}
-              <span>{{ project.name or "The practice" }}</span>
-            </span>
-          </article>
-        {% endfor %}
-      </section>
-    {% endif %}
+    {% set listingEntries = collections.liveEntries %}
+    {% include "components/earlier-entries.njk" %}
   </section>
-
-  <aside class="stream-margin">
-    <a class="margin-practice" href="/live/practice/">
-      <img class="practice-mark" src="/live/assets/drawn/practice.png" alt="" aria-hidden="true">
-      <strong>The practice</strong>
-      <span>{{ collections.livePracticeEntries.length }}</span>
-      <small>Entries about working this way rather than about any one project.</small>
-    </a>
-
-    <section class="margin-projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">The projects</h2>
-      {% if collections.liveProjects.length %}
-        <ul>
-          {% for project in collections.liveProjects %}
-            <li>
-              {% if project.glyph %}
-                <span class="project-glyph" style="--project-colour: {{ project.colour }}; --project-glyph: url('{{ project.glyph }}')" aria-hidden="true"></span>
-              {% else %}
-                <span class="project-dot" style="--project-colour: {{ project.colour }}" aria-hidden="true"></span>
-              {% endif %}
-              {% if project.projectUrl %}
-                <a href="{{ project.projectUrl }}">{{ project.name }}</a>
-              {% else %}
-                <span>{{ project.name }}</span>
-              {% endif %}
-              <small>{{ project.count }}</small>
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        <p>Projects appear here once they have a published entry.</p>
-      {% endif %}
-    </section>
-  </aside>
+  <img class="desk-divider" src="/live/assets/drawn/divider.png" alt="" aria-hidden="true">
 </div>

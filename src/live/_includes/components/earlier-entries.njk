@@ -1,0 +1,19 @@
+    {% set earlierEntries = listingEntries | drop(3) %}
+    {% if earlierEntries.length %}
+      <div class="paper-sheet earlier-sheet"><section class="earlier-entries" aria-labelledby="earlier-heading">
+        <h2 id="earlier-heading">Earlier</h2>
+        {% for entry in earlierEntries %}
+          {% set project = entry.data.projectDetails[0] %}
+          <article class="earlier-entry" style="--project-colour: {{ project.colour or '#6B6560' }}">
+            <time datetime="{{ entry.date | isoDate }}">{{ entry.date | displayDate }}</time>
+            <img class="earlier-entry__mark" src="{{ entry.data.kindDetails.asset }}" alt="" aria-hidden="true">
+            <span class="earlier-entry__kind">{{ entry.data.kindDetails.label }}</span>
+            <h3><a href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+            <span class="earlier-entry__project">
+              {% if project.glyph %}<span class="earlier-entry__project-glyph" style="--project-glyph: url('{{ project.glyph }}')" aria-hidden="true"></span>{% endif %}
+              <span>{{ project.name or "The practice" }}</span>
+            </span>
+          </article>
+        {% endfor %}
+      </section></div>
+    {% endif %}

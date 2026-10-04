@@ -1,0 +1,19 @@
+    <div class="newsletter-footer__signup">
+      {% if site.newsletterAction %}
+        <form action="{{ site.newsletterAction }}" method="post">
+          <label class="visually-hidden" for="newsletter-email-{{ newsletterId or "footer" }}">Email address</label>
+          <input id="newsletter-email-{{ newsletterId or "footer" }}" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <input name="embed" type="hidden" value="1">
+          <input name="tag" type="hidden" value="live-site">
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-status">You’ll receive an email to confirm. Unsubscribe anytime.</p>
+      {% else %}
+        <div class="newsletter-placeholder" aria-describedby="newsletter-status-{{ newsletterId or 'footer' }}">
+          <span aria-hidden="true">you@example.com</span>
+          <span aria-hidden="true">Join</span>
+        </div>
+        <p id="newsletter-status-{{ newsletterId or 'footer' }}" class="newsletter-status">{{ site.newsletterName }} signup will open before launch.</p>
+      {% endif %}
+      <p class="newsletter-rss">Free, always. Or follow by <a href="/live/feed.xml">RSS</a>.</p>
+    </div>
