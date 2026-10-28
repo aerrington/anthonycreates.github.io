@@ -130,7 +130,8 @@ p { color: var(--text-2); }
   background: var(--accent);
   transition: width 0.25s var(--ease);
 }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover,
+.nav-links a[aria-current="page"] { color: var(--accent); }
 .nav-links a:hover::after { width: 100%; }
 
 .nav-toggle {
@@ -998,6 +999,35 @@ footer a:hover { color: var(--accent); }
   margin-top: 14px;
   text-transform: uppercase;
 }
+
+/* ─── Freelance Work ─── */
+.work-content > .project-prose:first-child h2 { margin-top: 0; }
+.work-content h3 { font-size: 1.3rem; margin: 28px 0 12px; }
+.work-content .project-prose li {
+  color: var(--text-2);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+.work-content .project-prose li::before {
+  background: var(--accent);
+  border-radius: 50%;
+  content: '';
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 6px;
+}
+.work-download { margin-top: 26px; }
+.work-content .project-cta p a {
+  border-bottom: 1px solid var(--accent-light);
+  color: var(--accent);
+  font-weight: 600;
+}
+.work-content .project-cta p a:hover { border-color: var(--accent); }
 
 /* ─── Scroll Animations ─── */
 @keyframes fadeUp {

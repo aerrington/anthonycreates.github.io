@@ -46,6 +46,7 @@ export default function (eleventyConfig) {
     "home",
     "archive",
     "projects",
+    "work",
     "writing",
   ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
 
