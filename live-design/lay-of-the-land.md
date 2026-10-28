@@ -9,7 +9,7 @@ _Last reviewed: August 2026_
 
 ## Who this is
 
-Anthony Errington — Oxford-based (Wheatley). C#/.NET developer by day at Idox plc;
+Anthony Errington — Oxford-based. C#/.NET developer by day;
 improviser, facilitator and co-founder/treasurer of **Awkward Actors**, a short-form improv
 group running shows and community workshops. Trained maths teacher (PGCE, Oxford). Builds
 web games and tools solo, mostly with AI-assisted tooling (Bolt, Claude Code, Supabase,
@@ -73,8 +73,7 @@ wanting to work for himself and build a business, not just tinker. Enormous joy 
 generating ideas, alongside a newer desire to focus and find what could actually become a
 business.
 
-The Idox takeover has completed and the share options have vested — that blocker is gone.
-What remains is a judgement call about risk and readiness. Idox is currently genuinely
+What remains is a judgement call about risk and readiness. The day job is currently genuinely
 interesting because of AI acceleration, offering another domain to grow in. Worth noting:
 an interesting job is harder to leave than a bad one, so it may be worth defining in
 advance what evidence constitutes the button (a revenue figure, a subscriber count) rather
@@ -118,7 +117,7 @@ quietly jumped the queue.
 | Shipping | **The Daily Playhouse** (dailyplayhouse.com) + the games mature enough to launch under it |
 | Workshop | **Suggestion Machine** — run live at Awkward Actors shows. Break it, fix it. No pricing, no landing page yet. |
 | Play | Gibber, Brick-Brack-Bro, As I Recall, Scraps / The Moth, Castles of Burgundy engine, iPad spikes, 25 Squares, Virus Game, point-and-click engine, Classic Comic Art, Holy Unexpected |
-| Constraint | Idox; freelance improv facilitation and workshops (invoiced via Awkward Actors) |
+| Constraint | Day job; freelance improv facilitation and workshops (invoiced via Awkward Actors) |
 
 ## Project inventory
 
@@ -244,7 +243,7 @@ them.** If it ever wants to become something more structured, the replies will s
 3. What makes a toy worth finishing? The method explains generation and is silent on completion. This is the real one.
 4. Is website design a real service line, or a distraction wearing the costume of income?
 5. What's in the PGCE maths notes — specifically, which mechanics generate their own content?
-6. What evidence would make leaving Idox feel like a decision rather than a leap?
+6. What evidence would make leaving the day job feel like a decision rather than a leap?
 
 ### Six-week focusing question
 
