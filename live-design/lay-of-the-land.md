@@ -9,7 +9,7 @@ _Last reviewed: August 2026_
 
 ## Who this is
 
-Anthony Errington — Oxford-based (Wheatley). C#/.NET developer by day;
+Anthony Errington — Oxford-based. C#/.NET developer by day;
 improviser, facilitator and co-founder/treasurer of **Awkward Actors**, a short-form improv
 group running shows and community workshops. Trained maths teacher (PGCE, Oxford). Builds
 web games and tools solo, mostly with AI-assisted tooling (Bolt, Claude Code, Supabase,
